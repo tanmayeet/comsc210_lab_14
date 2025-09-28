@@ -17,9 +17,11 @@ class Color {
   void setGreen(int g) { green = g; }
   int getBlue() { return blue; }
   void setBlue(int b) { blue = b; }
-};
 
-void print(Color);
+  void print() {
+    cout << name << ": (" << red << ", " << green << ", " << blue << ")\n";
+  }
+};
 
 int main() {
   // I lookd up RGB values of colors I like
@@ -30,7 +32,6 @@ int main() {
   burgundy.setGreen(0);
   burgundy.setBlue(32);
   burgundy.print();  // does this work?
-  print(burgundy);
 
   Color viridian;
   viridian.setName("Viridian");
@@ -38,12 +39,6 @@ int main() {
   viridian.setGreen(130);
   viridian.setBlue(109);
   viridian.print();  // does this work?
-  print(viridian);
 
   return 0;
-}
-
-void print(Color c) {
-  cout << c.getName() << ": (" << c.getRed() << ", " << c.getGreen() << ", "
-       << c.getBlue() << ")\n";
 }
