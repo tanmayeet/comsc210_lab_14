@@ -4,14 +4,17 @@
 #include <iostream>
 using namespace std;
 
-// Here
+// Initialized a Color class
 class Color {
+  // our private subclass contains 4 variables with color
+  // name, red, green, blue
  private:
   int red;
   int green;
   int blue;
   string name;
 
+  // public class gets and sets each variable from the public class
  public:
   string getName() { return name; }
   void setName(string n) { name = n; }
@@ -22,6 +25,7 @@ class Color {
   int getBlue() { return blue; }
   void setBlue(int b) { blue = b; }
 
+  // this function prints and fomrats the data from the class
   void print() {
     cout << name << ": (" << red << ", " << green << ", " << blue << ")\n";
   }
@@ -36,7 +40,8 @@ int main() {
   burgundy.setRed(128);
   burgundy.setGreen(0);
   burgundy.setBlue(32);
-  burgundy.print();
+  burgundy.print();  // calls the print function we initialized in the public
+                     // class section
 
   Color viridian;
   // Set name and RGB values of Viridian
@@ -45,6 +50,7 @@ int main() {
   viridian.setGreen(130);
   viridian.setBlue(109);
   viridian.print();  // calls the print function we initialized in the public
+                     // subclass
 
   return 0;
 }
