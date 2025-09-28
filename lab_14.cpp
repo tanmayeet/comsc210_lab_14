@@ -10,14 +10,14 @@ class Color {
   string name;
 
  public:
+  string getName() { return name; }  // input validation? or do we assume
+  void setName(string n) { name = n; }
   int getRed() { return red; }
   void setRed(int r) { red = r; }
   int getGreen() { return green; }
   void setGreen(int g) { green = g; }
   int getBlue() { return blue; }
   void setBlue(int b) { blue = b; }
-  string getName() { return name; }
-  void setName(string n) { name = n; }
 };
 
 void print(Color);
@@ -35,7 +35,7 @@ int main() {
   print(burgundy);
 
   Color viridian;
-  v.setName("Burgundy");
+  viridian.setName("Viridian");
   viridian.setRed(64);
   viridian.setGreen(130);
   viridian.setBlue(109);
@@ -45,5 +45,7 @@ int main() {
   return 0;
 }
 
-void print(Color s){cout << "(" << s.getRed() << s.getGreen() << ", "
-                         << s.getBlue() << " )"}
+void print(Color c) {
+  cout << c.getName() << ": (" << c.getRed() << ", " << c.getGreen() << ", "
+       << c.getBlue() << ")\n";
+}
