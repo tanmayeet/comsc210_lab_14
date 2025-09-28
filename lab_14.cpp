@@ -1,4 +1,3 @@
-#include <iomanip>  // what's this for? in sample code
 #include <iostream>
 using namespace std;
 
@@ -23,7 +22,6 @@ class Color {
 void print(Color);
 
 int main() {
-  cout << fixed << setprecision(2);
   // I lookd up RGB values of colors I like
   // Color 1
   Color burgundy;
@@ -31,7 +29,7 @@ int main() {
   burgundy.setRed(128);
   burgundy.setGreen(0);
   burgundy.setBlue(32);
-  // burgundy.print(); //does this work?
+  burgundy.print();  // does this work?
   print(burgundy);
 
   Color viridian;
@@ -39,7 +37,7 @@ int main() {
   viridian.setRed(64);
   viridian.setGreen(130);
   viridian.setBlue(109);
-  // viridian.print(); //does this work?
+  viridian.print();  // does this work?
   print(viridian);
 
   return 0;
