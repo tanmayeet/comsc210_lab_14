@@ -4,17 +4,34 @@
 #include <iostream>
 using namespace std;
 
-// Initialized a Color class
+/*UML for Color class:
+private:
+-red: int
+-green: int
+-blue: int
+-name: string
+
+public:
++getName(): string
++setName(string): void
++getRed(): int
++setRed(int): void
++getGreen(): int
++setGreen(int): void
++getBlue(): int
++setBlue(int): void
++print(): void
+*/
+
+// Initialized a Color class that represents a color with RGB values and a name
 class Color {
-  // our private subclass contains 4 variables with color
-  // name, red, green, blue
  private:
   int red;
   int green;
   int blue;
   string name;
 
-  // public class gets and sets each variable from the public class
+  // Public methods provide access to private member variables
  public:
   string getName() { return name; }
   void setName(string n) { name = n; }
@@ -25,32 +42,28 @@ class Color {
   int getBlue() { return blue; }
   void setBlue(int b) { blue = b; }
 
-  // this function prints and fomrats the data from the class
+  // print() prints the color name and RGB values in a formatted manner
   void print() {
     cout << name << ": (" << red << ", " << green << ", " << blue << ")\n";
   }
 };
 
 int main() {
-  // I lookd up RGB values of colors I like
-  // Color 1
   Color burgundy;
-  // Set name and RGB values of Burgundy
+  // Create and initialize the Color burgundy
   burgundy.setName("Burgundy");
   burgundy.setRed(128);
   burgundy.setGreen(0);
   burgundy.setBlue(32);
-  burgundy.print();  // calls the print function we initialized in the public
-                     // class section
+  burgundy.print();  // Displays Color burgundy
 
+  // Create and initialize the Color viridian
   Color viridian;
-  // Set name and RGB values of Viridian
   viridian.setName("Viridian");
   viridian.setRed(64);
   viridian.setGreen(130);
   viridian.setBlue(109);
-  viridian.print();  // calls the print function we initialized in the public
-                     // subclass
+  viridian.print();  // Displays Color viridian
 
   return 0;
 }
